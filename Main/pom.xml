@@ -8,7 +8,6 @@
 <version>1.0-SNAPSHOT</version>
 
 <dependencies>
-    <!-- exp4j for evaluating expressions -->
     <dependency>
         <groupId>net.objecthunter</groupId>
         <artifactId>exp4j</artifactId>

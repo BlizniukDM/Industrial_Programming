@@ -17,7 +17,7 @@ public class FileProcessor {
 
     public void process(String inputFilePath, String outputFilePath) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFilePath));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
 
             String line;
             while ((line = reader.readLine()) != null) {

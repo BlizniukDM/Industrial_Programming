@@ -11,7 +11,6 @@ public class Exp4jEvaluator implements ExpressionEvaluator {
             Expression exp = new ExpressionBuilder(expression).build();
             double result = exp.evaluate();
 
-            // Проверяем деление на 0
             if (Double.isInfinite(result)) {
                 return "Ошибка. Деление на 0";
             }
@@ -19,10 +18,6 @@ public class Exp4jEvaluator implements ExpressionEvaluator {
             return String.valueOf(result);
         } catch (ArithmeticException e) {
             return "Ошибка. Деление на 0";
-        } catch (UnknownFunctionOrVariableException e) {
-            return "Ошибка в выражении: " + expression;
-        } catch (Exception e) {
-            return "Ошибка при обработке: " + expression;
         }
     }
 }

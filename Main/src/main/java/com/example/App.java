@@ -10,7 +10,6 @@ public class App {
         String inputFilePath = "input.txt";
         String outputFilePath = "output.txt";
 
-        // Используем стратегию для вычисления арифметических выражений
         ExpressionEvaluator evaluator = new Exp4jEvaluator();
         FileProcessor processor = new FileProcessor(evaluator);
 
