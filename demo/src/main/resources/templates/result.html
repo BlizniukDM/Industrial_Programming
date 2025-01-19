@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Результат загрузки</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Результаты обработки</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Содержимое загруженного файла:</h1>
-    <div th:utext="${fileContent}"></div>
-    <a href="/">Вернуться</a>
+    <div class="container">
+        <h1>Результаты обработки файла</h1>
+        <ul class="results">
+            <li th:each="result : ${results}" th:text="${result}"></li>
+        </ul>
+        <a href="/" class="button">Назад</a>
+    </div>
 </body>
 </html>

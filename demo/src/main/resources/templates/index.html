@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Загрузка файла</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <h1>Загрузите текстовый файл</h1>
-    <form method="post" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".txt" required />
-        <button type="submit">Загрузить</button>
-    </form>
+    <div class="container">
+        <h1>Загрузите файл с математическими выражениями</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".txt" required>
+            <button type="submit">Обработать файл</button>
+        </form>
+        <p class="note">Поддерживаемый формат файла: текстовый файл (.txt), одна строка — одно выражение.</p>
+    </div>
 </body>
 </html>
